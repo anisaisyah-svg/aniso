@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="biodata.html">Biodata</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="hobby.html">Hobby</a></li>
+        <li><a href="blog.html">Blog</a></li>
+		<li><a href="family_gallery.html">Family Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>    
+</nav>
+
+<div id="loading">
+    <div class="moon">
+        <span>🖐🏻</span>
+        <span>🤓</span>
+        <span>Waitt</span>
+    </div>
+    <p><strong>....😙 </strong></p>
+</div>
+
+
+<!-- About Section -->
+<section id="home" class="container">
+    <div class="left">
+        <img src="image/me.jpeg" alt="Achah's Photo">
+    </div>
+    <div class="right">
+        <h1>My Website</h1>
+        <p>Hello, my name is Anis. Welcome to my personal website!</p>
+    </div>
+</section>
+
+<footer>
+   <p>2025 Anis. All rights reserved.</p>
+   <p>Last updated: 30 December 2025</p>
+   <p>contact: <a href="anisaisyahroslan@gmail.com">anisaisyahroslan@gmail.com</a></p>
+</footer>   
+
+<!-- JavaScript code here-->
+
+<script>
+    // Select all sections with class 'section'
+    const sections = document.querySelectorAll('.section');
+
+    // Function to check if section is in viewport
+    function showSection() {
+        const triggerBottom = window.innerHeight / 5 * 4;
+
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+
+            if(sectionTop < triggerBottom) {
+                section.classList.add('show'); // add class to animate
+            } else {
+                section.classList.remove('show'); // optional: hide when scrolled above
+            }
+        });
+    }
+
+    // Listen for scroll events
+    window.addEventListener('scroll', showSection);
+
+    // Trigger on page load
+    showSection();
+	
+</script>
+
+</body>
+</html>
